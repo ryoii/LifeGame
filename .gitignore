@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/.gitignore
+.idea/ant.xml
+.idea/artifacts/
+.idea/compiler.xml
+.idea/description.html
+.idea/encodings.xml
+.idea/gradle.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+LifeGame.iml
+out/
