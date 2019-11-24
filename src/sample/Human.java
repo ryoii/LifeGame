@@ -3,22 +3,15 @@ package sample;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Rectangle;
 
-import static sample.Main.WIDTH;
+import static sample.Main.SIZE;
 
-public class Human extends Rectangle {
+class Human extends Rectangle {
 
-    private State state;
-
-    public Human() {
-        super(WIDTH, WIDTH);
+    Human(State state) {
+        super(SIZE, SIZE, state.getPaint());
     }
 
-    public Human(State state) {
-        super(WIDTH, WIDTH, state.getPaint());
-    }
-
-    public void setState(State state) {
-        this.state = state;
+    void setState(State state) {
         this.setFill(state.getPaint());
     }
 
@@ -29,8 +22,8 @@ public class Human extends Rectangle {
         private static Paint alive = Paint.valueOf("black");
         private static Paint died = Paint.valueOf("white");
 
-        public static State valueOf(boolean alive) {
-            return alive ? ALIVE : DIED;
+        public static State valueOf(int alive) {
+            return (alive & 1) == 0 ? DIED : ALIVE;
         }
 
         public Paint getPaint() {

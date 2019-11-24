@@ -8,8 +8,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    public static int WIDTH = 4;
-    public static int N = 50;
+    static final int SIZE = 4;
+    static final int N = 200;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
